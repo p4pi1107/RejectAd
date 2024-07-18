@@ -1,2 +1,2 @@
 # RejectAd
-Chrome Adblocker extension
+A dynamic Chrome Adblocker extension
