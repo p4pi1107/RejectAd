@@ -1,0 +1,41 @@
+{
+    "name": "COCKBLOCKER9000",
+    "version": "1.0",
+    "permissions": ["tabs", "declarativeNetRequest", "activeTab", "scripting", "storage", "unlimitedStorage"], 
+    "background": {
+      "service_worker": "service_worker.js"
+    }, 
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at": "document_start"
+      }
+    ],
+    "action": {
+        "default_popup": "index.html"
+    },
+    "icons": {
+        "16": "icons/logo_16x16.png",
+        "48": "icons/logo_48x48.png",
+        "128": "icons/logo_128x128.png"
+    },
+    "manifest_version": 3,
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "web_accessible_resources": [
+        {
+          "resources": ["data.json"],
+          "matches": ["<all_urls>"]
+        }
+      ],
+    "declarative_net_request" : {
+      "rule_resources" : [{
+        "id": "1",
+        "enabled": true,
+        "path": "rules.json"
+      }]
+    }
+}

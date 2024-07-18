@@ -1,0 +1,153 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 250px;  /* Adjust the width to fit your images */
+  height: 300px;  /* Adjust the height to fit your images */
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  -webkit-transition: .2s;
+  transition: .2s;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+input:checked + .slider {
+  background-image: url('icons/on.png'); /* Change to your chasedown block image */
+}
+
+input:not(:checked) + .slider {
+  background-image: url('icons/off.png'); /* Change to your standing still image */
+}
+
+/* Optional: Add some styles to the slider for better visualization */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 0px;
+  -webkit-transition: .2;
+  transition: .2s;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+input:checked + .slider.round:before {
+  background-image: url('icons/on.png'); /* Change to your chasedown block image */
+}
+
+input:not(:checked) + .slider.round:before {
+  background-image: url('icons/off.png'); /* Change to your standing still image */
+}
+
+#headerIcon {
+  max-width: 300px; /* Ensure it doesn't get too wide */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Center the image */
+  margin: 0 auto; 
+}
+
+body {
+  background-color: #ffffff;
+  width: 350px;
+  height: 500px;
+  
+  position: relative;
+}
+
+.switch {
+  margin-bottom: 20px; 
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.blacklist {
+  background-color: bisque;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #eed6d6;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+input, button {
+  font-size: 14px;
+  margin: 5px 0;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  cursor: pointer;
+  background-color: #dadfe4;
+  color: black;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+button:hover {
+  background-color: #fcd7d7;
+}
+
+h1 {
+  font-size: 25px;
+  color: black;
+  margin: 0px;
+  font-family: 'ITC Magnifico Daytime', sans-serif;
+  text-align: center
+}
+h3 {
+  font-size: 15px;
+  color: black;
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+@font-face {
+  font-family: 'ITC Magnifico Daytime';
+  src: url('fonts/itc-magnifico-daytime.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
