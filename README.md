@@ -1,0 +1,2 @@
+# RejectAd
+Chrome Adblocker extension
